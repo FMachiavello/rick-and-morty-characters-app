@@ -1,5 +1,3 @@
-Descripción del Repositorio
-
 Bienvenido a mi aplicación basada en Expo y React Native que ofrece una experiencia única al explorar la Astronomy Picture of the Day (APOD) proporcionada por la NASA. Con esta aplicación, podrás descubrir y guardar tus imágenes astronómicas favoritas, así como realizar búsquedas en el vasto repositorio de la NASA.
 
 Características Principales
