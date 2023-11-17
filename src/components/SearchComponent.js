@@ -30,11 +30,9 @@ const styles = StyleSheet.create({
     padding:30,
     height:100,
     minWidth:400,
-
   },
   SearchButton : {
-    padding:10,
-
+    padding:10,    
   }
 });
 

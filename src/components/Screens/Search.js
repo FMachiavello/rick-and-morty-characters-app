@@ -30,11 +30,6 @@ const Search = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    padding: 10, 
-    alignItems: 'center',
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
   }
 });
 
