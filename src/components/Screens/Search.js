@@ -1,19 +1,19 @@
 // App.js
 import React, { useState } from 'react';
-import { View, Text, FlatList, StyleSheet, useColorScheme } from 'react-native';
+import { View, Text, FlatList, StyleSheet } from 'react-native';
 import axios from 'axios';
 import SearchComponent from '../SearchComponent';
+import Post from '../Post';
 
 const Search = () => {
-  const isDarkMode = useColorScheme() === 'dark'
-  const [results, setResults] = useState([]);
+  const [character, setCharacter] = useState([]);
 
-  const searchCharacters = async ({ name, status }) => {
+  const searchCharacters = async ({ name }) => {
     try {
       const response = await axios.get(
-        `https://rickandmortyapi.com/api/character/?name=${name}&status=${status}`
+        `https://rickandmortyapi.com/api/character/?name=${name}`
       );
-      setResults(response.data.results);
+      setCharacter(response.data.results);
     } catch (error) {
       console.error('Error fetching data:', error);
     }
@@ -21,17 +21,8 @@ const Search = () => {
 
   return (
     <View style={styles.container}>
-      <SearchComponent onSearch={searchCharacters} style={isDarkMode ? styles.whiteText : styles.dark} />
-      <FlatList
-        data={results}
-        keyExtractor={(item) => item.id.toString()}
-        renderItem={({ item }) => (
-          <View>
-            <Text>{item.name}</Text>
-            {/* Puedes mostrar más detalles del personaje aquí */}
-          </View>
-        )}
-      />
+      <SearchComponent onSearch={searchCharacters} />
+      <Post characters={character}/>
     </View>
   );
 };
@@ -44,12 +35,6 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
-  },
-  whiteText: {
-    color: '#FFFFFF'
-  },
-  darkText: {
-    color: '#000000'
   }
 });
 
