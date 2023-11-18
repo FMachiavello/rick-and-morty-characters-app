@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
-import { View, StyleSheet } from 'react-native';
-import { SearchBar } from 'react-native-elements';
+import React, { useState } from "react";
+import { View, StyleSheet } from "react-native";
+import { SearchBar } from "react-native-elements";
 
 const MySearchBar = () => {
-  const [searchText, setSearchText] = useState('');
+  const [searchText, setSearchText] = useState("");
 
   const handleSearch = (text) => {
     setSearchText(text);
@@ -11,7 +11,8 @@ const MySearchBar = () => {
 
   return (
     <View style={styles.container}>
-      <SearchBar style={styles.SearchBar}
+      <SearchBar
+        style={styles.SearchBar}
         placeholder="Search..."
         onChangeText={handleSearch}
         value={searchText}
@@ -26,8 +27,8 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   SearchBar: {
-    padding:10,
-  }
+    padding: 10,
+  },
 });
 
 export default MySearchBar;

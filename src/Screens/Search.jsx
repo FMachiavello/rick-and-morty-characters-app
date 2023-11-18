@@ -1,9 +1,9 @@
 // App.js
-import React, { useState } from 'react';
-import { View, Text, FlatList, StyleSheet } from 'react-native';
-import axios from 'axios';
-import SearchComponent from '../components/SearchComponent';
-import Post from '../components/Post';
+import React, { useState } from "react";
+import { View, Text, FlatList, StyleSheet } from "react-native";
+import axios from "axios";
+import SearchComponent from "../components/SearchComponent";
+import Post from "../components/Post";
 
 const Search = () => {
   const [character, setCharacter] = useState([]);
@@ -15,7 +15,7 @@ const Search = () => {
       );
       setCharacter(response.data.results);
     } catch (error) {
-      console.error('Error fetching data:', error);
+      console.error("Error fetching data:", error);
     }
   };
 
@@ -23,7 +23,7 @@ const Search = () => {
     <View style={styles.container}>
       <SearchComponent onSearch={searchCharacters} />
       <View style={styles.container2}>
-        <Post characters={character}/>
+        <Post characters={character} />
       </View>
     </View>
   );
@@ -33,14 +33,12 @@ const styles = StyleSheet.create({
   container: {
     padding: 10,
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: "#fff",
   },
-  container2: { 
-    justifyContent:'center',
-    alignItems:'center',
-
-  }
-
+  container2: {
+    justifyContent: "center",
+    alignItems: "center",
+  },
 });
 
 export default Search;
