@@ -1,9 +1,9 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import Screen1 from './Screens/Home';
-import Screen2 from './Screens/Search';
-import Screen3 from './Screens/Album';
+import Screen1 from '../Screens/Home';
+import Screen2 from '../Screens/Search';
+import Screen3 from '../Screens/Album';
 import Icon from 'react-native-vector-icons/Ionicons'
 
 const Tab = createBottomTabNavigator();
@@ -24,7 +24,6 @@ const AppNavigator = () => {
             case 'Album':
               iconName='albums-outline'
               break;
-
           }
           return <Icon name={iconName} size={25} color={color}/>
         },

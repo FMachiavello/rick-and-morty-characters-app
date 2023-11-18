@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { View, StyleSheet, Text, FlatList, Image} from 'react-native';
-import Post from '../Post'; 
+import Post from '../components/Post'; 
 import axios from 'axios';
 
 const Home = () => {

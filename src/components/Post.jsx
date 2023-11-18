@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Image, Text, StyleSheet, FlatList } from 'react-native';
 import StateDot from './StateDot';
-
+import SaveButton from './SaveButton';
 const Post = ({ characters }) => {
 
   return (
@@ -11,7 +11,10 @@ const Post = ({ characters }) => {
       renderItem={({ item }) => (
         <View style={styles.postContainer}>
           <Image style={styles.postImage} source={{ uri: item.image }}/>
-          <Text style={styles.postTitle} >{item.name}</Text>
+          <View style={styles.titleContainer}>
+            <Text style={styles.postTitle} >{item.name}</Text>
+            <SaveButton/>
+          </View>
           <StateDot status={item.status}/>
           <Text style={styles.postMeta}>Last seen:</Text>
           <Text style={styles.postDescription} >{item.location.name}</Text>
@@ -24,6 +27,13 @@ const Post = ({ characters }) => {
 };
 
 const styles = StyleSheet.create({
+  titleContainer:{
+    flexDirection:'row',
+    flex:1,
+    alignItems:'center',
+    justifyContent:'space-between',
+  
+  },
   postContainer: {
     maxWidth: 800,
     margin: 20,
@@ -44,7 +54,8 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontWeight: 'bold',
     paddingTop:5,
-    paddingBottom:10
+    paddingBottom:10,
+    flexDirection:'row'
 
   },
   postMeta: {

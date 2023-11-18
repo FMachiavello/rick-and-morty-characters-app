@@ -10,7 +10,7 @@ const SearchComponent = ({ onSearch }) => {
   };
 
   return (
-    <View style={styles.container}>
+    <View>
       <SearchBar style={styles.SearchBar}
         placeholder="Search by name..."
         onChangeText={(text) => setName(text)}
@@ -23,16 +23,17 @@ const SearchComponent = ({ onSearch }) => {
 };
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
+
   SearchBar: {
     padding:30,
-    height:100,
+    height:80,
+    fontSize:17,
     minWidth:400,
   },
   SearchButton : {
     padding:10,    
+    width:100,
+
   }
 });
 
