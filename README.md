@@ -1,14 +1,32 @@
-Bienvenido a mi aplicación basada en Expo y React Native que ofrece una experiencia única al explorar la Astronomy Picture of the Day (APOD) proporcionada por la NASA. Con esta aplicación, podrás descubrir y guardar tus imágenes astronómicas favoritas, así como realizar búsquedas en el vasto repositorio de la NASA.
+# Rick and Morty Characters App
 
-Características Principales
+Una aplicación móvil desarrollada con Expo y React Native que permite a los usuarios buscar personajes de Rick and Morty por nombre y guardar sus favoritos en un perfil.
 
-APOD Explorer: Explora las imágenes más fascinantes del cosmos proporcionadas por la NASA para cada día.
-Función de Búsqueda: Busca imágenes astronómicas por fecha y explora la riqueza del repositorio de la NASA.
-Guarda tus Favoritos: Guarda tus imágenes favoritas para verlas más tarde y disfrutar de la belleza del espacio.
-Integración de la APOD API: Utiliza el endopoint apod para obtener información actualizada sobre la imagen astronómica del día.
+## Características
 
-Tecnologías Utilizadas
-React Native: Framework para el desarrollo de aplicaciones móviles multiplataforma.
-Expo: Plataforma y conjunto de herramientas para desarrollar aplicaciones React Native rápidamente.
-APOD API: API proporcionada por la NASA para acceder a datos astronómicos.
-¡Explora el universo con esta emocionante aplicación y descubre la belleza del cosmos a diario!
+- **Búsqueda de Personajes:** Busca personajes de Rick and Morty por nombre.
+- **Perfil de Usuario:** Guarda tus personajes favoritos en tu perfil.
+- **Interfaz Intuitiva:** Diseño sencillo y fácil de usar.
+
+## Instalación
+
+1. Clona el Repositorio:
+   git clone https://github.com/tu-usuario/rick-and-morty-app.git
+   
+2. Instala Dependencias:
+  npm install
+
+3. Inicia la Aplicación:
+  npm start
+   Escanea el Código QR:
+  Escanea el código QR con la aplicación Expo Go en tu dispositivo móvil.
+
+## Uso
+
+Búsqueda de Personajes:
+
+Ingresa el nombre del personaje en el campo de búsqueda.
+Selecciona el personaje deseado de los resultados.
+
+Perfil de Usuario:
+Guarda tus personajes favoritos en tu perfil.
